@@ -1,54 +1,54 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# gameR <img src="man/figures/sticker.png" align="right" width="150"/>
+# gameR <img src="man/figures/logo.png" align="right" width="150"/>
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/nathansam/gameR/workflows/R-CMD-check/badge.svg)](https://github.com/nathansam/gameR/actions)
-[![codecov](https://codecov.io/gh/nathansam/gameR/branch/main/graph/badge.svg?token=lb83myWBXt)](https://app.codecov.io/gh/nathansam/gameR)
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/gameR)](https://cran.r-project.org/package=gameR)
-![Top
-language](https://img.shields.io/github/languages/top/nathansam/gameR)
-[![License:
-GPL-3](https://img.shields.io/badge/License-GPL3-green.svg)](https://opensource.org/licenses/GPL-3.0)
+| Usage                                                                                                                            | Release                                                                                                        | Development                                                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [![License: GPL-3](https://img.shields.io/badge/License-GPL3-green.svg)](https://opensource.org/licenses/GPL-3.0)                | [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/gameR)](https://cran.r-project.org/package=gameR) | [![R-CMD-check](https://github.com/nathansam/gameR/workflows/CI/badge.svg)](https://github.com/nathansam/gameR/actions)                                                                                |
+| ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)                                    | [![gameR status badge](https://nathansam.r-universe.dev/badges/gameR)](https://nathansam.r-universe.dev)       | [![codecov](https://codecov.io/gh/nathansam/gameR/branch/main/graph/badge.svg?token=lb83myWBXt)](https://app.codecov.io/gh/nathansam/gameR)                                                            |
+| [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/grand-total/gameR?color=green)](https://r-pkg.org/pkg/gameR) |                                                                                                                | [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) |
+|                                                                                                                                  |                                                                                                                | [![Tidyverse style guide](https://img.shields.io/static/v1?label=Code%20Style&message=Tidyverse&color=1f1c30)](https://style.tidyverse.org)                                                            |
+
 <!-- badges: end -->
 
-gameR provides a collection of R colour palettes inspired by video
-games.
+gameR provides a collection of R color palettes inspired by video games.
 
-**Note**: these colour palettes may *not* be colour blind friendly. If
+**Note**: these color palettes may *not* be color blind friendly. If
 accessibility is a priority, I recommend either using the [virdis
 package](https://CRAN.R-project.org/package=viridis) or checking your
-plots before sharing using tools which simulate colour blindness such as
+plots before sharing using tools which simulate color blindness such as
 [coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/)
 
 **Table of Contents**
 
--   [Installation](#installation)
--   [Getting started](#getting-started)
--   [Palettes](#palettes)
--   [Contributing Palettes](#contributing-palettes)
+  - [Installation](#installation)
+  - [Getting started](#getting-started)
+  - [Palettes](#palettes)
+  - [Contributing new palettes](#contributing-new-palettes)
 
 ## Installation
 
-gameR is on CRAN! Install the stable version of gameR with:
+gameR is on CRAN\! Install the stable version of gameR with:
 
 ``` r
 install.packages("gameR")
 ```
 
-You can install the development version of gameR from
-[GitHub](https://github.com/) with:
+You can install the development version of gameR, which may contain
+additional palettes, from [r-universe](https://r-universe.dev/search/)
+with:
 
 ``` r
-# install.packages("devtools")
-remotes::install_github("nathansam/gameR")
-```
+# Enable universe(s) by nathansam
+options(repos = c(
+  nathansam = 'https://nathansam.r-universe.dev',
+  CRAN = 'https://cloud.r-project.org'))
 
-The development version of gameR may include additional palettes,
-however breaking changes may be implemented before the CRAN release of
-these palettes.
+install.packages('gameR')
+```
 
 ## Getting started
 
@@ -57,7 +57,7 @@ library(gameR)
 library(ggplot2)
 ```
 
-gameR provides either discrete colour palettes or continuous palettes
+gameR provides either discrete color palettes or continuous palettes
 generated by interpolating a discrete palette. Discrete palettes and
 continuous palettes are provided via the `gameR_cols()` and
 `gameR_cont()` functions respectively with the name of the palette
@@ -66,9 +66,9 @@ passed as an argument. For a full list of the palettes provided by
 
 ``` r
 gameR_cols()
-#>  [1] "blocks"    "cowboy"    "cups"      "cyberpunk" "fallout"   "gris"     
-#>  [7] "ocarina"   "p4g"       "rayman"    "spirit"    "splat"     "superbros"
-#> [13] "wow"
+#>  [1] "blocks"    "border"    "cowboy"    "cups"      "cyberpunk" "fallout"  
+#>  [7] "gris"      "ocarina"   "p4g"       "pman"      "rayman"    "sonic"    
+#> [13] "spirit"    "splat"     "superbros" "wow"
 ```
 
 ## Palettes
@@ -76,13 +76,21 @@ gameR_cols()
 This section presents a list of the palettes provided by gameR ordered
 alphabetically by the name of the game which inspired the palette.
 
+### Borderlands
+
+``` r
+gameR_cols("border")
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
 ### Cuphead
 
 ``` r
 gameR_cols("cups")
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ### Cyberpunk
 
@@ -90,7 +98,7 @@ gameR_cols("cups")
 gameR_cols("cyberpunk")
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
 ### Fallout
 
@@ -98,7 +106,7 @@ gameR_cols("cyberpunk")
 gameR_cols("fallout")
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
 
 ### Gris
 
@@ -106,7 +114,7 @@ gameR_cols("fallout")
 gameR_cols("gris")
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
 
 ### Legend of Zelda: Ocarina of Time
 
@@ -114,7 +122,15 @@ gameR_cols("gris")
 gameR_cols("ocarina")
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
+
+### Pac-Man
+
+``` r
+gameR_cols("pman")
+```
+
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
 
 ### Persona 4 Golden
 
@@ -122,7 +138,7 @@ gameR_cols("ocarina")
 gameR_cols("p4g")
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
 
 ### Rayman
 
@@ -130,7 +146,7 @@ gameR_cols("p4g")
 gameR_cols("rayman")
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
 
 ### Red Dead Redemption II
 
@@ -138,7 +154,15 @@ gameR_cols("rayman")
 gameR_cols("cowboy")
 ```
 
-<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
+
+### Sonic the Hedgehog
+
+``` r
+gameR_cols("sonic")
+```
+
+<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
 
 ### Spiritfarer
 
@@ -146,7 +170,7 @@ gameR_cols("cowboy")
 gameR_cols("spirit")
 ```
 
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-16-1.png" width="100%" />
 
 ### Splatoon
 
@@ -154,7 +178,7 @@ gameR_cols("spirit")
 gameR_cols("splat")
 ```
 
-<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
 
 ### Super Mario Bros
 
@@ -162,7 +186,7 @@ gameR_cols("splat")
 gameR_cols("superbros")
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-18-1.png" width="100%" />
 
 ### Tetris
 
@@ -170,7 +194,7 @@ gameR_cols("superbros")
 gameR_cols("blocks")
 ```
 
-<img src="man/figures/README-unnamed-chunk-16-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
 
 ### World of Warcraft
 
@@ -178,11 +202,11 @@ gameR_cols("blocks")
 gameR_cols("wow")
 ```
 
-<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-20-1.png" width="100%" />
 
-## Contributing Palettes
+## Contributing new palettes
 
-Contributions via pull requests are welcome! I would love to have as
+Contributions via pull requests are welcome\! I would love to have as
 many video games represented as possible. With that said, there are two
 requirements I ask of any contributed palettes:
 
@@ -206,7 +230,7 @@ documentation.
 
 ### Updating the README
 
-The readme is generated by
+The README is generated by
 [README.Rmd](https://github.com/nathansam/gameR/blob/main/README.Rmd).
 Please update this file with the palettes you are contributing (the
 palettes are in alphabetical order) and knit the file before committing
@@ -215,7 +239,7 @@ and pushing your contributions.
 ### Credit
 
 If you are contributing palette(s), I would love for your contribution
-to be recognised. Please feel free to add yourself as a contributor
+to be recognized. Please feel free to add yourself as a contributor
 (role = “ctb”) in the
 [DESCRIPTION](https://github.com/nathansam/gameR/blob/main/DESCRIPTION)
 file.

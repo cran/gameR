@@ -8,12 +8,12 @@ gameR_cols(palette = NULL, reverse = FALSE)
 }
 \arguments{
 \item{palette}{Character name of palette. Either
-blocks, cowboy, cups, cyberpunk, fallout, gris, ocarina, p4g, rayman, spirit, splat, superbros, wow)`}
+blocks, border, cowboy, cups, cyberpunk, fallout, gris, ocarina, p4g, pman, rayman, sonic, spirit, splat, superbros, wow)`}
 
 \item{reverse}{Logical. Should the palette be reversed? Defaults to FALSE.}
 }
 \value{
-Vector containing a hex colour code representation for the chosen
+Vector containing a hex color code representation for the chosen
 palette
 }
 \description{
