@@ -8,7 +8,8 @@ knitr::opts_chunk$set(
 
 ## ----setup, message = FALSE---------------------------------------------------
 library(gameR)
-library(tidyverse)
+library(ggplot2)
+library(magrittr)
 library(palmerpenguins)
 data("penguins")
 
@@ -18,19 +19,22 @@ penguins %>%
   geom_point() +
   theme_bw() +
   ggtitle("ggplot example using the 'rayman' palette") +
-  scale_color_manual(values = gameR_cols("rayman")) 
+  scale_color_manual(values = gameR_cols("rayman"))
 
 ## -----------------------------------------------------------------------------
 par(bg = "white")
 
 attach(penguins)
-plot(x = body_mass_g,
-     y = flipper_length_mm,
-     main = "Base R example using the 'cyberpunk' palette",
-     cex = 1,
-     pch = 21,
-     bg = gameR_cols("cyberpunk")[unclass(species)])
+plot(
+  x = body_mass_g,
+  y = flipper_length_mm,
+  main = "Base R example using the 'cyberpunk' palette",
+  cex = 1,
+  pch = 21,
+  bg = gameR_cols("cyberpunk")[unclass(species)]
+)
 legend(5500, 200,
-       legend = attr(unclass(species), "levels"),
-       fill = gameR_cols("cyberpunk"), cex = 0.8)
+  legend = attr(unclass(species), "levels"),
+  fill = gameR_cols("cyberpunk"), cex = 0.8
+)
 
