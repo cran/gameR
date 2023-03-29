@@ -67,9 +67,10 @@ passed as an argument. For a full list of the palettes provided by
 
 ``` r
 gameR_cols()
-#>  [1] "blocks"    "border"    "cowboy"    "cups"      "cyberpunk" "fallout"  
-#>  [7] "gris"      "ocarina"   "p4g"       "pman"      "rayman"    "sonic"    
-#> [13] "spirit"    "splat"     "superbros" "wow"
+#>  [1] "banjo"     "blocks"    "border"    "cowboy"    "cups"      "cyberpunk"
+#>  [7] "fallout"   "gris"      "kirby"     "ocarina"   "okami"     "p4g"      
+#> [13] "pman"      "rayman"    "sonic"     "spirit"    "splat"     "superbros"
+#> [19] "wow"
 ```
 
 ## Palettes
@@ -77,13 +78,21 @@ gameR_cols()
 This section presents a list of the palettes provided by gameR ordered
 alphabetically by the name of the game which inspired the palette.
 
+### Banjo-Kazooie
+
+``` r
+gameR_cols("banjo")
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
 ### Borderlands
 
 ``` r
 gameR_cols("border")
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
 
 ### Cuphead
 
@@ -91,7 +100,7 @@ gameR_cols("border")
 gameR_cols("cups")
 ```
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
 ### Cyberpunk
 
@@ -99,7 +108,7 @@ gameR_cols("cups")
 gameR_cols("cyberpunk")
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
 
 ### Fallout
 
@@ -107,7 +116,7 @@ gameR_cols("cyberpunk")
 gameR_cols("fallout")
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
 
 ### Gris
 
@@ -115,7 +124,15 @@ gameR_cols("fallout")
 gameR_cols("gris")
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
+
+### Kirby
+
+``` r
+gameR_cols("kirby")
+```
+
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
 
 ### Legend of Zelda: Ocarina of Time
 
@@ -123,7 +140,15 @@ gameR_cols("gris")
 gameR_cols("ocarina")
 ```
 
-<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
+
+### Okami
+
+``` r
+gameR_cols("okami")
+```
+
+<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
 
 ### Pac-Man
 
@@ -131,7 +156,7 @@ gameR_cols("ocarina")
 gameR_cols("pman")
 ```
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
 
 ### Persona 4 Golden
 
@@ -139,7 +164,7 @@ gameR_cols("pman")
 gameR_cols("p4g")
 ```
 
-<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
 
 ### Rayman
 
@@ -147,7 +172,7 @@ gameR_cols("p4g")
 gameR_cols("rayman")
 ```
 
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-16-1.png" width="100%" />
 
 ### Red Dead Redemption II
 
@@ -155,7 +180,7 @@ gameR_cols("rayman")
 gameR_cols("cowboy")
 ```
 
-<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
 
 ### Sonic the Hedgehog
 
@@ -163,7 +188,7 @@ gameR_cols("cowboy")
 gameR_cols("sonic")
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-18-1.png" width="100%" />
 
 ### Spiritfarer
 
@@ -171,7 +196,7 @@ gameR_cols("sonic")
 gameR_cols("spirit")
 ```
 
-<img src="man/figures/README-unnamed-chunk-16-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
 
 ### Splatoon
 
@@ -179,7 +204,7 @@ gameR_cols("spirit")
 gameR_cols("splat")
 ```
 
-<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-20-1.png" width="100%" />
 
 ### Super Mario Bros
 
@@ -187,7 +212,7 @@ gameR_cols("splat")
 gameR_cols("superbros")
 ```
 
-<img src="man/figures/README-unnamed-chunk-18-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-21-1.png" width="100%" />
 
 ### Tetris
 
@@ -195,7 +220,7 @@ gameR_cols("superbros")
 gameR_cols("blocks")
 ```
 
-<img src="man/figures/README-unnamed-chunk-19-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-22-1.png" width="100%" />
 
 ### World of Warcraft
 
@@ -203,7 +228,7 @@ gameR_cols("blocks")
 gameR_cols("wow")
 ```
 
-<img src="man/figures/README-unnamed-chunk-20-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-23-1.png" width="100%" />
 
 ## Contributing new palettes
 
