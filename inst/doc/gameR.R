@@ -1,4 +1,4 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -13,7 +13,7 @@ library(magrittr)
 library(palmerpenguins)
 data("penguins")
 
-## ---- warning = FALSE---------------------------------------------------------
+## ----warning = FALSE----------------------------------------------------------
 penguins %>%
   ggplot(aes(x = body_mass_g, y = flipper_length_mm, color = species)) +
   geom_point() +
